@@ -1,0 +1,139 @@
+.team-description{
+    color: white;
+    background: #21214e;
+    height: 194px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    padding-top: 10px;
+    margin-top: -82px;
+    z-index: 1;
+}
+.team-description h3{
+    color: white;
+}
+.team-description p{
+    color: white !important;
+}
+.social-links-team{
+    display: flex;
+    gap: 12px;
+}
+.social-links-team a i{
+    color: #afacac;
+    width: 33px;
+    height: 33px;
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 8px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-links-team a:hover i{
+    color: white;
+    border-color: white;
+}
+.sucess-story-img img{
+    width: 100%;
+}
+
+
+
+.carousel-sucess-story-people {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /* max-width: 800px; */
+    overflow: hidden;
+    position: relative;
+    margin-top: 3rem;
+}
+
+.carousel-sucess-story-people .carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-sucess-story-people .carousel-cards {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.carousel-sucess-story-people .card {
+    flex: 0 0 33.33%; 
+    max-width: 33.33%;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 0 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 18px;
+    transition: 0.3 ease-in-out;
+    display: flex;
+    flex-direction: column;
+    height: 382px;
+}
+.sucess-man-img img{
+    width: 100%;
+}
+@media screen and (max-width:900px) {
+    .carousel-sucess-story-people .card {
+        flex: 0 0 50%; 
+        max-width: 50%;
+    } 
+}
+@media screen and (max-width:500px) {
+    .carousel-sucess-story-people .card {
+        flex: 0 0 100%; 
+        max-width: 100%;
+    } 
+}
+.carousel-sucess-story-people button.prev,.carousel-sucess-story-people button.next {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    font-size: 20px;
+}
+
+.carousel-sucess-story-people button.prev {
+    left: 0;
+}
+
+.carousel-sucess-story-people button.next {
+    right: 0;
+}
+.sucess-man-description{
+    color: white;
+    background: #21214e;
+    height: 87px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    padding-top: 10px;
+    /* margin-top: -82px; */
+    z-index: 1;
+    transform: translateY(0); /* Initial position */
+    transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+.sucess-man-description h3{
+    color: white;
+}
+.sucess-man-description p{
+    color: white !important;
+}
+
+.carousel-sucess-story-people .card:hover .sucess-man-description {
+    height: 150px;
+    transform: translateY(-50px);
+    transition: transform 0.3s ease-in-out; 
+}
