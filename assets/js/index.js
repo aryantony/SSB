@@ -19,7 +19,7 @@ function updateVisibleCards() {
     }
 
     // Update cardWidth based on the current visibleCards
-    cardWidth = carouselCards.children[0].offsetWidth + 20; // Including margin
+    cardWidth = carouselCards.children[0].offsetWidth+20
 
     // Adjust the starting position of the carousel
     currentIndex = visibleCards;
@@ -33,14 +33,14 @@ function updateCarousel() {
 }
 
 function checkIndex() {
-    const totalCards = carouselCards.children.length - (visibleCards * 2); // Adjust for cloned cards
+    const totalCards = carouselCards.children.length / 3; // Adjust for tripled cards
 
-    if (currentIndex <= 0) {
-        currentIndex = totalCards;
+    if (currentIndex < visibleCards) {
+        currentIndex = totalCards + currentIndex;
         carouselCards.style.transition = 'none';
         carouselCards.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-    } else if (currentIndex >= totalCards + visibleCards) {
-        currentIndex = visibleCards;
+    } else if (currentIndex >= totalCards * 2 + visibleCards) {
+        currentIndex = currentIndex - totalCards;
         carouselCards.style.transition = 'none';
         carouselCards.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
     }
@@ -48,32 +48,39 @@ function checkIndex() {
 
 // Event listeners for the buttons
 prevButton.addEventListener('click', () => {
+    console.log("ok")
     currentIndex--;
     updateCarousel();
-    setTimeout(checkIndex, 300); // Ensure index is checked after transition
+    setTimeout(checkIndex, 300); 
 });
 
 nextButton.addEventListener('click', () => {
     currentIndex++;
     updateCarousel();
-    setTimeout(checkIndex, 300); // Ensure index is checked after transition
+    setTimeout(checkIndex, 300);
 });
 
 // Update visible cards and initialize the carousel on load
 window.addEventListener('load', () => {
     updateVisibleCards();
 
-    // Clone the first and last visibleCards for infinite looping
+    // Clone all cards to create a 1-10-1-10-1-10 sequence
     const totalCards = carouselCards.children.length;
 
-    for (let i = 0; i < visibleCards; i++) {
-        const cloneFirst = carouselCards.children[i].cloneNode(true);
-        const cloneLast = carouselCards.children[totalCards - 1 - i].cloneNode(true);
-        carouselCards.appendChild(cloneFirst);
-        carouselCards.insertBefore(cloneLast, carouselCards.firstChild);
-    }
-
-    updateCarousel();
+    const originalCards = Array.from(carouselCards.children);
+    originalCards.forEach(card => carouselCards.appendChild(card.cloneNode(true))); // Clone 1-10
+    originalCards.forEach(card => carouselCards.appendChild(card.cloneNode(true))); // Clone 1-10 again
+    originalCards.forEach(card => carouselCards.appendChild(card.cloneNode(true)));
+    originalCards.forEach(card => carouselCards.appendChild(card.cloneNode(true)));
+    originalCards.forEach(card => carouselCards.appendChild(card.cloneNode(true)));
+    originalCards.forEach(card => carouselCards.appendChild(card.cloneNode(true)));
+    originalCards.forEach(card => carouselCards.appendChild(card.cloneNode(true)));
+    originalCards.forEach(card => carouselCards.appendChild(card.cloneNode(true)));
+    originalCards.forEach(card => carouselCards.appendChild(card.cloneNode(true)));
+    originalCards.forEach(card => carouselCards.appendChild(card.cloneNode(true)));
+    originalCards.forEach(card => carouselCards.appendChild(card.cloneNode(true)));
+    currentIndex = totalCards; // Set the currentIndex to the first actual item after cloning
+    carouselCards.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
 });
 
 // Update visible cards on window resize
@@ -81,3 +88,4 @@ window.addEventListener('resize', () => {
     updateVisibleCards();
     updateCarousel();
 });
+updateCarousel();

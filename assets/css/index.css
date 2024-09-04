@@ -1,6 +1,6 @@
 .team-description{
     color: white;
-    background: #21214e;
+    background: #000080;
     height: 194px;
     display: flex;
     flex-direction: column;
@@ -20,7 +20,7 @@
     gap: 12px;
 }
 .social-links-team a i{
-    color: #afacac;
+    color: #cccccc;
     width: 33px;
     height: 33px;
     border: 1px solid;
@@ -65,8 +65,8 @@
     flex: 0 0 33.33%; 
     max-width: 33.33%;
     box-sizing: border-box;
-    padding: 20px;
-    margin: 0 10px;
+    padding: 21px;
+    margin: 0 7px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -75,10 +75,11 @@
     transition: 0.3 ease-in-out;
     display: flex;
     flex-direction: column;
-    height: 382px;
+    /* height: 382px; */
 }
 .sucess-man-img img{
     width: 100%;
+    /* border: 1px solid #d3d3d3; */
 }
 @media screen and (max-width:900px) {
     .carousel-sucess-story-people .card {
@@ -93,9 +94,10 @@
     } 
 }
 .carousel-sucess-story-people button.prev,.carousel-sucess-story-people button.next {
-    background-color: #333;
+    background-color: #000080;
     color: #fff;
     border: none;
+    border-radius: 50%;
     padding: 10px;
     cursor: pointer;
     position: absolute;
@@ -103,6 +105,11 @@
     transform: translateY(-50%);
     z-index: 10;
     font-size: 20px;
+    width: 41px;
+    height: 41px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .carousel-sucess-story-people button.prev {
@@ -114,7 +121,7 @@
 }
 .sucess-man-description{
     color: white;
-    background: #21214e;
+    background: #000080;
     height: 87px;
     display: flex;
     flex-direction: column;
@@ -131,9 +138,103 @@
 .sucess-man-description p{
     color: white !important;
 }
+.top-part-sucess-card{
+    display: flex;
+    background: #000080;
+    color: #adadad !important;
+    margin-bottom: 0px !important;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+}
+.call-to-action p {
+    color: #bebebe;
+    font-weight: 300;
+}
 
-.carousel-sucess-story-people .card:hover .sucess-man-description {
-    height: 150px;
-    transform: translateY(-50px);
-    transition: transform 0.3s ease-in-out; 
+.home-video  {
+    width: 100%; /* Make the video take up 100% of the container's width */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Remove any extra space below the video */
+    max-width: 100%; /* Ensure it doesn't exceed the width of the parent container */
+}
+.hero-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-home .image-left{
+    width: 50%;
+}
+.hero-home .video-left{
+    width: 50%;
+}
+.hero-home .image-left img{
+    width: 100%;
+}
+.main{
+    margin-top: 90px;
+}
+.header{
+    background-color: rgba(14, 29, 52, 0.9) !important;
+}
+.hero{
+    height: 100vh;
+}
+.services .card .card-img img {
+    transition: 10000s ease-in-out;
+    height: 312px;
+    object-fit: cover;
+    width: 100%;
+}
+.witness-map{
+    width: 50%;
+}
+.witness-map img{
+    width:100%;
+}
+.witness-graph{
+    display: flex;
+
+}
+.all-area-of-witness{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+}
+.defence-roles{
+   
+}
+.defence-roles h5 {
+    color: #d8cece !important;
+    font-weight: 700;
+
+}
+.defence-area{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    background: #555577;
+    padding: 25px;
+    color: #ffffff;
+    border-radius: 5px;
+    gap: 5px;
+    justify-content: space-between;
+}
+.defence-area-img i{
+    font-size: 31px;
+    color: #9594a5;
+}
+
+@media screen and (max-width:900px) {
+  .witness-graph{
+    flex-direction: column-reverse;
+  }  
+  .witness-map{
+    width: 100%;
+  }
+  .all-area-of-witness{
+    width: 100%;
+  }
 }
