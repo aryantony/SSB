@@ -89,3 +89,38 @@ window.addEventListener('resize', () => {
     updateCarousel();
 });
 updateCarousel();
+
+
+
+function countUp(element) {
+    const target = +element.getAttribute('data-target');
+    const speed = 200; // Lower value for faster counting
+
+    const updateCount = () => {
+        const current = +element.innerText;
+        const increment = target / speed;
+
+        if (current < target) {
+            element.innerText = Math.ceil(current + increment);
+            requestAnimationFrame(updateCount);
+        } else {
+            element.innerText = target;
+        }
+    };
+
+    updateCount();
+}
+
+function handleScroll() {
+    const section = document.getElementById('number-changer-achievement');
+    const sectionTop = section.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (sectionTop < windowHeight) {
+        const numbers = document.querySelectorAll('.number-changer-achievement .number');
+        numbers.forEach(number => countUp(number));
+        window.removeEventListener('scroll', handleScroll);
+    }
+}
+
+window.addEventListener('scroll', handleScroll);

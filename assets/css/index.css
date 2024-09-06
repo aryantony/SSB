@@ -238,3 +238,58 @@
     width: 100%;
   }
 }
+
+.number-changer-achievement {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 37px;
+    /* width: 80%; */
+    margin: 0 auto;
+    margin-top: -50px;
+}
+
+.number-changer-achievement .card {
+    background-color: #354e82;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    height: 145px;
+}
+
+.number-changer-achievement .number {
+    font-size: 2em;
+    color: #ededed;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.number-changer-achievement p {
+    font-size: 1em;
+    color: #b4b4b4;
+    text-align: center;
+}
+@media screen and (max-width:500px) {
+    .number-changer-achievement .card {
+     width: 100%;   
+    }
+    .number-changer-achievement {
+       
+        gap: 10px;
+    }
+}
+
+.page-name{
+    position: absolute;
+    top: 198px;
+    background: #6c68b3;
+    color: white;
+    z-index: 2;
+    /* width: 100%; */
+    left: 32px;
+}
+.sucess-man-description p{
+    text-align: center;
+}

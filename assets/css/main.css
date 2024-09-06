@@ -74,6 +74,9 @@ h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
 }
+p{
+  text-align: justify;
+}
 
 /* Pulsating Play Button
 ------------------------------*/
