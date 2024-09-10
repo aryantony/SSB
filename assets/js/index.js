@@ -28,8 +28,12 @@ function updateVisibleCards() {
 
 function updateCarousel() {
     const offset = -currentIndex * cardWidth;
-    carouselCards.style.transition = 'transform 0.3s ease';
-    carouselCards.style.transform = `translateX(${offset}px)`;
+    if(carouselCards)
+    {
+        carouselCards.style.transition = 'transform 0.3s ease';
+    carouselCards.style.transform = `translateX(${offset}px)`;   
+    }
+ 
 }
 
 function checkIndex() {
@@ -47,18 +51,26 @@ function checkIndex() {
 }
 
 // Event listeners for the buttons
-prevButton.addEventListener('click', () => {
+if(prevButton)
+{
+ prevButton.addEventListener('click', () => {
     console.log("ok")
     currentIndex--;
     updateCarousel();
     setTimeout(checkIndex, 300); 
-});
-
-nextButton.addEventListener('click', () => {
+});   
+}
+ 
+if(nextButton)
+{
+   nextButton.addEventListener('click', () => {
     currentIndex++;
     updateCarousel();
     setTimeout(checkIndex, 300);
-});
+}); 
+}
+
+
 
 // Update visible cards and initialize the carousel on load
 window.addEventListener('load', () => {
