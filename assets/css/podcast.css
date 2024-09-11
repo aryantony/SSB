@@ -1,0 +1,74 @@
+.hero{
+    height: 60vh;
+  }
+  .pod-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -120px;
+    text-align: center;
+  }
+
+
+ .ytb-courses .courses-section {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.ytb-courses .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.ytb-courses .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.ytb-courses .course-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.ytb-courses .course-card:hover {
+    transform: scale(1.05);
+}
+
+.ytb-courses .course-card iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+}
+
+.ytb-courses .course-description {
+    padding: 15px;
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .ytb-courses  .course-card iframe {
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ytb-courses  .section-title {
+        font-size: 2rem;
+    }
+
+    .ytb-courses   .course-card iframe {
+        height: 150px;
+    }
+
+    .ytb-courses    .course-description {
+        font-size: 0.9rem;
+    }
+}
