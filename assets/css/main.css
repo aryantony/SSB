@@ -220,6 +220,7 @@ p{
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
+  max-height: 142px;
 }
 
 .header .logo {
@@ -227,7 +228,7 @@ p{
 }
 
 .header .logo img {
-  max-height: 50px;
+  max-height: 156px;
   margin-right: 8px;
 }
 
@@ -1994,4 +1995,48 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+.sitename{
+  position: relative;
+  /* border: 2px solid blue; */
+}
+.nae-div-site{
+  position: absolute;
+    top: 41%;
+    right: -204px;
+    border-bottom: 1px solid #adacaa;
+}
+.nae-div-site div{
+  font-size: 20px;
+  color: #d6c774;
+  font-weight: 700;
+}
+.nae-div-site p{
+  font-size: 12px;
+  font-weight: 500;
+  font-style: italic;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+@media screen and (max-width:450px) {
+  .header{
+    max-height: none;
+  }
+  .header .logo img {
+    max-height: 89px;
+    margin-right: 8px;
+}
+.nae-div-site div{
+  font-size: 17px;
+}
+.nae-div-site p{
+  font-size: 10px;
+}
+.nae-div-site {
+  position: absolute;
+  /* border: 1px solid red; */
+  top: 34%;
+  right: -178px;
+}
 }

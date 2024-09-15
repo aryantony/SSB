@@ -293,3 +293,79 @@
 .sucess-man-description p{
     text-align: center;
 }
+.mansa-vacha h5{
+    font-weight: 700;
+}
+.masa-vacha-quote {
+    /* font-size: 24px;
+    font-weight: bold; */
+    display: inline-block;
+    text-align: justify;
+    font-weight: 500;
+  }
+  
+  .masa-vacha-quote span {
+    opacity: 0;
+    display: inline-block;
+    transition: color 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .color1 { color: red; }
+  .color2 { color: green; }
+  .color3 { color: blue; }
+  .color4 { color: purple; }
+  .color5 { color: orange; }
+  .color6 { color: teal; }
+  .color7 { color: gold; }
+  
+  /* Ensures spaces are visible */
+  .masa-vacha-quote span.space {
+    width: 10px; /* Adjust space width as needed */
+  }
+  
+  .ytb-index-iframe {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (height/width * 100) */
+    height: 0;
+    overflow: hidden;
+}
+
+.ytb-index-iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.witness-para-background-add{
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+}
+.witness-para-h{
+    width: 50%;
+}
+.added-ytb{
+    width: 50%;
+}
+@media screen and (max-width:900px) {
+    .witness-para-background-add{
+      flex-direction: column;  
+        
+    }
+    .witness-para-h{
+        width: 100%;
+    }
+    .added-ytb{
+        width: 100%;
+    }
+}
+.service-selection-container-navy{
+    margin-top: 5px;
+    margin-bottom: -20px;
+}

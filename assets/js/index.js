@@ -136,3 +136,36 @@ function handleScroll() {
 }
 
 window.addEventListener('scroll', handleScroll);
+
+const text = "When the Manasa-Vacha-Karmana synchronizes, the human being becomes Limitless & Fearless";
+const quoteElement = document.querySelector('.masa-vacha-quote');
+const colors = ['color1', 'color1', 'color1', 'color1', 'color1', 'color1', 'color1'];
+
+function animateText() {
+  quoteElement.innerHTML = ''; // Clear the previous animation
+
+  // Split the text into letters and create spans
+  text.split('').forEach((letter, i) => {
+    const span = document.createElement('span');
+    
+    if (letter === ' ') {
+      span.classList.add('space');
+    } else {
+      span.textContent = letter;
+      span.classList.add(colors[i % colors.length]);
+    }
+    
+    quoteElement.appendChild(span);
+
+    setTimeout(() => {
+      span.style.opacity = 1;
+    }, i * 100);  // Adjust timing for letter animation
+  });
+
+  // Restart the animation after it finishes
+  const totalDuration = text.length * 100; // 100ms per letter
+  setTimeout(animateText, totalDuration + 1000); // Add a 1 second pause before restarting
+}
+
+// Start the animation initially
+animateText();
