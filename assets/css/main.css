@@ -541,8 +541,9 @@ p{
 }
 
 .footer .footer-about .logo img {
-  max-height: 40px;
-  margin-right: 6px;
+  max-height: 156px;
+  margin-right: 42px;
+  margin-left: -31px;
 }
 
 .footer .footer-about .logo span {
@@ -2039,4 +2040,66 @@ section,
   top: 34%;
   right: -178px;
 }
+}
+
+/* hfhfh */
+.footer-sitename{
+  position: relative;
+  /* border: 2px solid blue; */
+}
+.footer-nae-div-site{
+  position: absolute;
+    top: 41%;
+    right: -204px;
+    border-bottom: 1px solid #adacaa;
+}
+.footer-nae-div-site div{
+  font-size: 20px;
+  color: #d6c774;
+  font-weight: 700;
+}
+.footer-nae-div-site p{
+  font-size: 12px;
+  font-weight: 500;
+  font-style: italic;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+@media screen and (max-width:450px) {
+ 
+.footer-nae-div-site div{
+  font-size: 17px;
+}
+.footer-nae-div-site p{
+  font-size: 10px;
+}
+.footer-nae-div-site {
+  position: absolute;
+  /* border: 1px solid red; */
+  top: 34%;
+  right: -205px;
+}
+.footer .footer-about .logo img {
+  max-height: 88px;
+  margin-right: 51px;
+  margin-left: -13px;
+}
+}
+.footer-wtsp i{
+  color: #a6d5a6;
+  font-size: 20px;
+  padding-right: 7px;
+  padding-top: 4px;
+}
+.footer-tele i{
+  color: #ceb8f3;
+  font-size: 20px;
+  padding-right: 7px;
+  padding-top: 4px;
+}
+.footer-mail i{
+  color: #e7729b;
+  font-size: 20px;
+  padding-right: 7px;
+  padding-top: 4px;
 }
