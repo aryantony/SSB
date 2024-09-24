@@ -72,3 +72,85 @@
         font-size: 0.9rem;
     }
 }
+.podcast-img-nkc{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.image-div-pod{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pod-description{
+    width: 50%;
+    border: 1px solid;
+    padding: 24px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+}
+.image-div-pod img{
+    width: 50%;
+}
+.pod-step-1{
+    color: red;
+}
+.pod-features {
+    background-color: #f4f4f4;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 1000px; /* Increased width for the tile layout */
+    margin: 20px auto;
+    font-family: 'Raleway', sans-serif;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pod-features p {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .pod-features ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 3 equal columns */
+    gap: 20px; /* Space between items */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .pod-features ul li {
+    background-color: #fff;
+    border-left: 4px solid #ff6347;
+    padding: 15px;
+    font-size: 16px;
+    color: #444;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for tile effect */
+    transition: background-color 0.3s ease;
+  }
+  
+  .pod-features ul li:hover {
+    background-color: #ff6347;
+    color: #fff;
+  }
+  
+  @media (max-width: 768px) {
+    .pod-features ul {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .pod-features ul {
+      grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+  }
+  
