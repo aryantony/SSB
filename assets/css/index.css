@@ -176,7 +176,8 @@
     margin-top: 90px;
 }
 .header{
-    background-color: rgba(14, 29, 52, 0.9) !important;
+    /* background-color: rgba(14, 29, 52, 0.9) !important; */
+    background-color: #000080 !important;
 }
 .hero{
     height: 100vh;
