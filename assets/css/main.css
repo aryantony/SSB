@@ -220,7 +220,7 @@ p{
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
-  max-height: 142px;
+  max-height: 102px;
 }
 
 .header .logo {
@@ -228,7 +228,7 @@ p{
 }
 
 .header .logo img {
-  max-height: 156px;
+  max-height: 98px;
   margin-right: 8px;
 }
 
@@ -2004,9 +2004,9 @@ section,
 }
 .nae-div-site{
   position: absolute;
-    top: 41%;
-    right: -204px;
-    border-bottom: 1px solid #adacaa;
+  top: 28%;
+  right: -216px;
+  border-bottom: 1px solid #adacaa;
 }
 .nae-div-site div{
   font-size: 20px;

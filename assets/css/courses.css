@@ -191,3 +191,26 @@
       width: 100%;
     }
   }
+  @keyframes blink-colors {
+    0% { color: #3498db; }   /* Light blue */
+    25% { color: #e74c3c; }  /* Vibrant red */
+    50% { color: #2ecc71; }  /* Bright green */
+    75% { color: #f39c12; }  /* Orange-yellow */
+    100% { color: #9b59b6; } /* Purple */
+}
+
+.back-to-course-button {
+  border: 1px solid #aab9d7;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: fit-content;
+  top: 29vw;
+  left: -40px;
+  margin-left: 11px;
+  margin-top: 13px;
+  font-size: 15px;
+  animation: blink-colors 1s infinite;
+  position: sticky;
+}

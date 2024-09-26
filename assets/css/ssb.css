@@ -94,3 +94,129 @@
         flex-basis: 100%; /* For 1 card per row */
     }
 }
+
+
+/* Header Section */
+.olqs-card-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #0000, #0008);
+    color: white;
+    border-radius: 18px 18px 2px 2px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 12px;
+    background: #000080;
+}
+
+.olqs-card-header h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #cfc3e4;
+}
+
+.olqs-card-header p {
+    /* font-size: 1.2rem;
+    line-height: 1.5; */
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Card Layout */
+.olqs-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    text-align: justify;
+}
+
+/* Card Styling */
+.olqs-top-container{
+    margin-bottom: 51px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0px 0px 5px rgb(0 24 200 / 20%);
+}
+.olqs-card {
+    background-color: #000080;
+    /* border-radius: 15px; */
+    padding: 20px;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    text-align: justify;
+}
+
+.olqs-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.olqs-card-title {
+    font-size: 21px;
+    margin-bottom: 15px;
+    color: #cfc3e4;
+    position: relative;
+    z-index: 1;
+    text-align: left;
+}
+
+.olqs-card-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.olqs-card-list li {
+    font-size: 1rem;
+    padding: 8px 0;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+/* Card Hover Effect */
+.olqs-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: rgba(0, 162, 255, 0.5);
+    transition: width 0.3s ease-in-out;
+    z-index: 0;
+}
+
+.olqs-card:hover::before {
+    width: 100%;
+}
+
+.olqs-card-list li::before {
+    content: '•';
+    color: #00a2ff;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .olqs-card-header h1 {
+        font-size: 2rem;
+    }
+
+    .olqs-card-header p {
+        font-size: 1rem;
+    }
+
+    .olqs-card-title {
+        font-size: 1.3rem;
+    }
+
+    .olqs-card-list li {
+        font-size: 0.95rem;
+    }
+}
