@@ -281,3 +281,148 @@
       flex: 1;
     }
   }
+
+  .ssb-journey {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000080;
+  }
+  
+  .ssb-journey-container {
+    width: 80%;
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  
+  .ssb-journey-item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 40px 0;
+  }
+  
+  .ssb-journey-item::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #fff; /* Timeline line color */
+    transform: translateX(-50%);
+  }
+  
+  .ssb-journey-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #ffcc00; /* Circle for each item */
+    transform: translateX(-50%);
+  }
+  
+  .ssb-journey-date {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffcc00;
+    margin-bottom: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 140px;
+    top: -37px;
+  }
+  
+  .ssb-journey-content {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 15px;
+    width: 45%;
+    position: relative;
+    top: 20px;
+  }
+  
+  .ssb-journey-item:nth-child(odd) .ssb-journey-content {
+    top: -7px;
+  }
+  
+  .ssb-journey-item:nth-child(even) .ssb-journey-content {
+    left: 54%;
+    top: -5px;
+  }
+  
+  .ssb-journey-content h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #fff;
+  }
+  
+  .ssb-journey-content p {
+    font-size: 16px;
+    color: #dcdcdc;
+  }
+  
+  @media (max-width: 768px) {
+    .ssb-journey-container {
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    .ssb-journey-content {
+      width: 80%;
+      left:56px !important;
+      text-align: left;
+    }
+  
+    .ssb-journey-item:nth-child(even) .ssb-journey-content {
+      text-align: left;
+    }
+  
+    .ssb-journey-date {
+      left: 10px;
+      transform: translateX(0);
+      text-align: left;
+    }
+  
+    .ssb-journey-item::before {
+      left: 30px;
+    }
+  
+    .ssb-journey-item:not(:last-child)::after {
+      left: 30px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .ssb-journey-content {
+      width: 100%;
+      padding: 10px;
+      left: 0 !important;
+      text-align: left;
+    }
+  
+    .ssb-journey-date {
+      font-size: 14px;
+      width: auto;
+    }
+    .ssb-journey-item::before {
+       display: none;
+      }
+    
+      .ssb-journey-item::after {
+       display: none;
+      }
+  }
+  
+  .our-jr-heading{
+    margin-top: -64px;
+    margin-bottom: -88px;
+  }
